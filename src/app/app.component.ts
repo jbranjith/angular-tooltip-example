@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tooltip Example';
-  tooltipText = "This is  text";
-  dataText = "Show Tooltip Text";
+  tooltipText = "Welcome to Angular! Angular helps you build modern applications for the web, mobile, or desktop." ;
+  //This guide shows you how to build and run a simple Angular app. You'll use the Angular CLI tool to accelerate development, while adhering to the Style Guide recommendations that benefit every Angular project.";
+  dataText = "Show Tooltip";
 }
