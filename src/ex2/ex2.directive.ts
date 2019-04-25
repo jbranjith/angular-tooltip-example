@@ -1,10 +1,10 @@
 import { Directive, Input, ElementRef, HostListener, Renderer2, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[tooltip]'
+  selector: '[lsm-tooltip]'
 })
-export class AppDirective implements OnInit {
-  @Input('tooltip') tooltipTitle: string;
+export class Ex2Directive implements OnInit {
+  @Input('lsm-tooltip') tooltipTitle: string;
   tooltip: HTMLElement;
   tooltipHeader: HTMLElement;
   offset = 16;
@@ -13,16 +13,16 @@ export class AppDirective implements OnInit {
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit() {
-    this.showTooltip();
+    //this.showTooltip();
   }
   @HostListener('mouseover')
   onMouseIn() {
-    //if (!this.tooltip)this.showTooltip();
+    if (!this.tooltip)this.showTooltip();
   }
 
   @HostListener('mouseleave')
   onMouseOut() {
-    //if (this.tooltip) this.hideTooltip();
+    if (this.tooltip) this.hideTooltip();
   }
 
   showTooltip() {
