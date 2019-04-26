@@ -1,12 +1,13 @@
 <html>
+
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/^1.12.2/themes/prism.css" />
 </head>
 
-
-<br><br>
-
-<div ngbPopover="{{tooltipText}}" triggers="click" popoverTitle="{{tooltipTitle}}">{{data}}</div>
-
+<br><br><br><br>
+<ng-template #popupTitle>
+{{tooltipTitle}} <a href="#" class="close">&times;</a>
+</ng-template>
+{{data}}<span ngbPopover="{{tooltipText}}" triggers="click" [popoverTitle]="popupTitle">...</span>
 </html>
